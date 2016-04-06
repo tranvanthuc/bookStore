@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Book store</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Tran Van Thuc">
+	<meta name="description" content="demo book store">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+
+	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href="../css/bootstrap.css">
+	 <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="text-center">
+			<h1>BOOK STORE</h1>
+		</div>
+
+		<div class="content">
+			<div class="table-responsive col-md-12">
+				<table class="table table-bordered table-hover">
+					
+					<thead >
+						<tr>
+							<th>
+								Tên sách
+							</th>
+
+							<th>
+								Tác giả
+							</th>
+
+							<th>
+								Năm xuất bản
+							</th>
+
+						</tr>
+					</thead>
+
+					<tbody id="show" >
+							
+							
+					</tbody>
+						
+
+				</table>
+			</div>
+
+			
+
+			<div class="button col-md-12">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="reset()">
+				  Create
+				</button>
+
+				
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Add book </h4>
+				      </div>
+				      <div class="modal-body">
+				       <form>
+						  <div class="form-group" >
+						    <label >Tên sách</label>
+						    <input type="text" class="form-control" id="nameBook" placeholder="Tên sách" onkeyup="check()">
+							<div id="z-nameBook"  class="noti"></div>
+						  </div>
+						  <div class="form-group">
+						    <label >Tác giả</label>
+						    <input type="text" class="form-control" id="nameAuthor"  placeholder="Tên tác giả" onkeyup="check()">
+						    <div id="z-nameAuthor" class="noti"></div>
+						  </div>
+						  <div class="form-group">
+						    <label >Năm xuất bản</label>
+						    <input type="text" class="form-control" id="yearPub" placeholder="Năm xuất bản" onkeyup="check()">
+						    <div id="z-yearPub" class="noti"></div>
+						  </div>
+						  
+						</form>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-primary" onclick="save()" >Save</button>
+				        <button type="button" class="btn btn-warning" onclick="reset()">Reset</button>
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+<script type="text/javascript" src="../js/javascript.js"></script>
+</body>
+</html>
